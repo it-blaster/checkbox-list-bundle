@@ -41,6 +41,22 @@ public function registerBundles()
 }
 ```
 
+Usage
+-------
+В форме редактирования нужно добавить поле с типом `checkbox_list`
+``` php
+->add('formStories', 'checkbox_list', array(
+    'label'                     => 'Истории:',
+    'foreign_objects'           => $this->getStoryForeignObjects(),
+    'choices'                   => $this->stories_choices,
+    'filter_add_foreign_object' => $this->getFilterAddStory(),
+    'foreign_object_model'      => 'story',
+    'bundle_alias'              => 'app_main',
+))
+```
+И необходимо добавить соответствующие методы и поля в форме:
+
+
 Credits
 -------
 

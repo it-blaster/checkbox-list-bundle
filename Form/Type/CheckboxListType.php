@@ -8,6 +8,12 @@ use Symfony\Component\Form\FormView;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
+/**
+ * Виджет "Список чекбоксов"
+ *
+ * Class CheckboxListType
+ * @package ItBlaster\CheckboxListBundle\Form\Type
+ */
 class CheckboxListType extends AbstractType
 {
     protected $choices = array();
@@ -21,6 +27,11 @@ class CheckboxListType extends AbstractType
 
     }
 
+    /**
+     * Дефолтные значения
+     *
+     * @param OptionsResolverInterface $resolver
+     */
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setOptional(array(
@@ -37,7 +48,13 @@ class CheckboxListType extends AbstractType
         ));
     }
 
-
+    /**
+     * Инициализация переменных для шаблона виджета
+     *
+     * @param FormView $view
+     * @param FormInterface $form
+     * @param array $options
+     */
     public function buildView(FormView $view, FormInterface $form, array $options)
     {
         $view->vars['foreign_objects'] = $options['foreign_objects'];
@@ -49,11 +66,21 @@ class CheckboxListType extends AbstractType
         $view->vars['foreign_object_link_edit'] = 'admin_'.$bundle.'_'.$foreign_alias.'_edit';
     }
 
+    /**
+     * Родительский виджет
+     *
+     * @return null|string|\Symfony\Component\Form\FormTypeInterface
+     */
     public function getParent()
     {
         return 'choice';
     }
 
+    /**
+     * Имя виджета
+     *
+     * @return string
+     */
     public function getName()
     {
         return $this->name;
