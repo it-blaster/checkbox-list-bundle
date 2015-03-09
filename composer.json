@@ -1,0 +1,25 @@
+{
+    "name": "it-blaster/checkbox-list-bundle",
+    "description": "Type Checkbox-list for symfony-form.",
+    "type": "symfony-bundle",
+    "keywords": ["symfony", "form", "type", "checkbox", "foreign"],
+    "homepage": "https://github.com/it-blaster/checkbox-list-bundle",
+    "license" : "MIT",
+    "authors": [
+        {
+            "name": "IT-Blaster",
+            "email": "it-blaster@yandex.ru"
+        }
+    ],
+    "require": {
+        "symfony/symfony": ">=2.2",
+        "propel/propel": "~2.0@dev",
+        "propel/propel-bundle": ">=1.4",
+        "sonata-project/propel-admin-bundle": ">=1.0"
+    },
+    "autoload": {
+        "psr-0": { "ItBlaster\\CheckboxListBundle": "" }
+    },
+    "minimum-stability": "dev",
+    "target-dir": "ItBlaster/CheckboxListBundle"
+}
