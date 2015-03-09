@@ -41,20 +41,21 @@ public function registerBundles()
 }
 ```
 
+В `app/config/config.yml` необходимо подключить шаблон виджета `checkbox_list`:
+``` bash
+twig:
+    form:
+        resources:
+            - 'ItBlasterCheckboxListBundle:Form:checkbox_list_widget.html.twig'
+
+assetic:
+    bundles:
+        - 'ItBlasterAttachFileBundle'
+```
+
 Usage
 -------
-В форме редактирования нужно добавить поле с типом `checkbox_list`
-``` php
-->add('formStories', 'checkbox_list', array(
-    'label'                     => 'Истории:',
-    'foreign_objects'           => $this->getStoryForeignObjects(),
-    'choices'                   => $this->stories_choices,
-    'filter_add_foreign_object' => $this->getFilterAddStory(),
-    'foreign_object_model'      => 'story',
-    'bundle_alias'              => 'app_main',
-))
-```
-И необходимо добавить соответствующие методы и поля в форме:
+
 
 
 Credits
