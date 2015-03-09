@@ -1,6 +1,8 @@
 CheckboxListBundle
 ====================
 
+[![Build Status](https://scrutinizer-ci.com/g/it-blaster/checkbox-list-bundle/badges/build.png?b=master)](https://scrutinizer-ci.com/g/it-blaster/checkbox-list-bundle/build-status/master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/it-blaster/checkbox-list-bundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/it-blaster/checkbox-list-bundle/?branch=master)
+
 Symfony2 bundle. Type "checkbox-list" for symfony-form.
 
 Installation

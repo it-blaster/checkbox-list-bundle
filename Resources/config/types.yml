@@ -1,0 +1,8 @@
+parameters:
+    it_blaster_redirect.type.class: ItBlaster\CheckboxListBundle\Form\Type\CheckboxListType
+
+services:
+    it_blaster.type.attach_file:
+        class: %it_blaster_redirect.type.class%
+        tags:
+            - {name: form.type, alias: checkbox_list }
