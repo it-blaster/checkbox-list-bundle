@@ -122,6 +122,24 @@ class ContactGroupAdmin extends Admin
     }
 
     /**
+     * Парметры фильтра для добавления контакта с выставленным текущей группой
+     *
+     * @return array
+     */
+    protected function getFilterAddContact()
+    {
+        $filter = array();
+        $object = $this->getSubject();
+        if ($object->getId()) {
+            $filter = array(
+                'filter[Group][type]'   => '',
+                'filter[Group][value]'  => $object->getId()
+            );
+        }
+        return $filter;
+    }
+
+    /**
      * После создания объекта
      *
      * @param mixed $object
