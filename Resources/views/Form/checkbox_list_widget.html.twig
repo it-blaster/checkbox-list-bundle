@@ -9,8 +9,8 @@
                        <input type="checkbox" id="{{ foreign_object_model }}_{{ foreign_object.id }}" value="{{ foreign_object.id }}" name="{{ full_name }}[]" {{ foreign_object.checked ? 'checked' }}> <label class="checkbox-list-item-li" for="{{ foreign_object_model }}_{{ foreign_object.id }}" >{{ foreign_object.label }}</label>&nbsp; <a href="{{ path(foreign_object_link_edit, { id: (foreign_object.edit_id is defined ? foreign_object.edit_id : foreign_object.id) }) }}" class="edit_link" target="_blank" title="{{ "Редактировать"|trans }}"><i class="glyphicon glyphicon-edit"></i></a>
                     </li>
                 {% endfor %}
-                <li><a href="{{ path(foreign_object_link_add, filter_add_foreign_object) }}" target="_blank">{{ "Создать"|trans }}</a></li>
             {% endif %}
+            <li><a href="{{ path(foreign_object_link_add, filter_add_foreign_object) }}" target="_blank">{{ "Создать"|trans }}</a></li>
         </ul>
     {% endspaceless %}
 {% endblock checkbox_list_widget %}
